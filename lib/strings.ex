@@ -25,10 +25,10 @@ defmodule Strings do
     """
     def get_middle(str) do
         len = String.length(str)
-        if Integer.is_odd(len) do
-           String.at(str, round(len/2 - 1)) 
-        else
+        unless Integer.is_odd(len) do
             String.slice(str, round(len/2 - 1), round(len/2))
+        else
+            String.at(str, round(len/2 - 1)) # is odd
         end
     end
 end

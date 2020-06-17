@@ -10,9 +10,9 @@ defmodule StringsTest do
     end
 
     test "basic tests" do
-        #assert get_middle("test") == "es"
-        #assert get_middle("testing") == "t"
-        #assert get_middle("middle") =="dd"
-        #assert get_middle("A") == "A"
+        assert get_middle("test") == "es"
+        assert get_middle("testing") == "t"
+        assert get_middle("middle") =="dd"
+        assert get_middle("A") == "A"
     end
 end
