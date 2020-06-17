@@ -30,8 +30,7 @@ defmodule Fundamentals do
 
     def bus([h | t]) do
         {enter, leave} = h
-        size = enter - leave
-        size + bus(t)
+        enter - leave + bus(t)
     end
 
     def bus([]), do: 0
