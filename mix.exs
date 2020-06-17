@@ -22,8 +22,8 @@ defmodule ElixirTraining.MixProject do
   defp deps do
     [
       {:earmark, "~> 0.1", only: :dev}, # a pure-Elixir Markdown converter
-      {:ex_doc, "~> 0.11", only: :dev} # for generating documentation
-      {:mix_test_watch, "~> 0.3", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.11", only: :dev}, # for generating documentation
+      {:mix_test_watch, "~> 1.0.2", only: :dev}
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
