@@ -1,9 +1,5 @@
 defmodule Numbers do
-     @moduledoc """
+  @moduledoc """
   A module that implements functions related to numbers
   """
-
-     
-
-
 end

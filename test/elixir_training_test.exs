@@ -7,7 +7,6 @@ defmodule ElixirTrainingTest do
   end
 
   test "sum two numbers" do
-    assert ElixirTraining.sum(1,2) == 3
+    assert ElixirTraining.sum(1, 2) == 3
   end
-  
 end
