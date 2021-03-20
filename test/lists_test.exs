@@ -28,10 +28,42 @@ defmodule ListsTest do
     assert count_sheeps([true]) == 1
     assert count_sheeps([true, false]) == 1
     assert count_sheeps([false, false]) == 0
-    assert count_sheeps(
-    [true,  true,  true,  false,
-     true,  true,  true,  true ,
-     true,  false, true,  false,
-     true,  false, false, true]) == 11
+
+    assert count_sheeps([
+             true,
+             true,
+             true,
+             false,
+             true,
+             true,
+             true,
+             true,
+             true,
+             false,
+             true,
+             false,
+             true,
+             false,
+             false,
+             true
+           ]) == 11
   end
+
+  defp grow(arr, exp) do
+    actual = grow(arr)
+
+    assert actual == exp,
+           "Given list #{inspect(arr, charlists: :as_lists)}, expecteed #{exp}, got #{actual}"
+  end
+
+  test "grow" do
+    grow([1, 2, 3], 6)
+    grow([4, 1, 1, 1, 4], 16)
+    grow([2, 2, 2, 2, 2, 2], 64)
+  end
+
+  # test "count by" do
+  #   assert count_by(1, 5) == [1, 2, 3, 4, 5]
+  #   assert count_by(2, 5) == [2, 4, 6, 8, 10]
+  # end
 end

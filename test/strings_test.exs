@@ -28,4 +28,36 @@ defmodule StringsTest do
   #   test "abracadabra", do: run_test("abracadabra", ["AbRaCaDaBrA", "aBrAcAdAbRa"])
   #   test "codewarriors", do: run_test("codewarriors", ["CoDeWaRrIoRs", "cOdEwArRiOrS"])
   # end
+
+  test "Sample Tests" do
+    assert reverse("world") == "dlrow"
+  end
+
+  test "calculates ngram" do
+    assert ngram("Show me the code") == [
+             "Show",
+             "Show me",
+             "Show me the",
+             "Show me the code",
+             "me",
+             "me the",
+             "me the code",
+             "the",
+             "the code",
+             "code"
+           ]
+
+    assert ngram("My name is Manuel") == [
+             "My",
+             "My name",
+             "My name is",
+             "My name is Manuel",
+             "name",
+             "name is",
+             "name is Manuel",
+             "is",
+             "is Manuel",
+             "Manuel"
+           ]
+  end
 end
