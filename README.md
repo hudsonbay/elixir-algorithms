@@ -14,7 +14,7 @@ Please, if you wanna contribute to this repository with your own algorithms, sit
 
 You can also feel free to create your own modules. They should also be documented, please.
 
-The aim of the project was also to have a reference or a repository of algorithms for situations and use cases that I can go and check out in case I'd have to do something similar on other projects. I hope it benefits you in the same way than me. 
+The aim of the project was also to have a reference or a repository of algorithms for situations and use cases that I can go and check out in case I'd have to do something similar on other projects. I hope it benefits you in the same way than me.
 
 I recommend calling your friend ```iex```. He loves you and will always help you.
 
@@ -24,6 +24,7 @@ Hope you enjoy it.
 
 ```elixir
 mix deps.get
+mix test.watch
 ```
 
 for adding dependencies that I used to generate documentation and test watching.
