@@ -1,6 +1,8 @@
 # Elixir Training
 
-**Description**
+## Description
+
+![screenshot](elixir_training.png)
 
 These are a bunch of different algorithms made on Elixir language, broken down by categories.
 
