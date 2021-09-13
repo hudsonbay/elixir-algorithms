@@ -21,12 +21,8 @@ defmodule ElixirTraining.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # a pure-Elixir Markdown converter
-      {:earmark, "~> 0.1", only: :dev},
-      # for generating documentation
       {:ex_doc, "~> 0.11", only: :dev},
       {:mix_test_watch, "~> 1.0.2", only: :dev}
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
   end
 end
