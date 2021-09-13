@@ -38,22 +38,8 @@ defmodule Strings do
   """
 
   # def capitalize(s) do
-  #   splitted = String.split(s, "", trim: true)
-  #   [h | t] = splitted
 
-  #   [s, s]
   # end
-
-  def proc([h | t]) do
-    maj = String.capitalize(h)
-    min = h
-    [maj, min]
-    proc(t)
-  end
-
-  def proc([]) do
-    []
-  end
 
   @vowels ~w[a i u e o]
   @doc """
@@ -123,6 +109,4 @@ defmodule Strings do
     |> Enum.reverse()
     |> Enum.join()
   end
-
-
 end

@@ -74,26 +74,54 @@ defmodule Lists do
   def sum([h | t]), do: h + sum(t)
 
   @doc """
-  Create a function with two arguments that will return an array of the first (n) multiples of (x).
+  Create a function with two arguments that will return an array of
+  the first (n) multiples of (x).
+  Assume both the given number and the number of times to count will
+  be positive numbers greater than 0.
 
-  Assume both the given number and the number of times to count will be positive numbers greater than 0.
-
-  Return the results as an array (or list in Python, Haskell or Elixir).
+  Return the results as an array.
 
   Examples:
   count_by(1, 10) == [1,2,3,4,5,6,7,8,9,10]
   count_by(2, 5) == [2,4,6,8,10]
-
   """
-  # def count_by(x, n) do
-  #   initial_count = 1
-  #   list = []
+  def count_by(x, n) do
+    Enum.map(1..n, fn elem -> x * elem end)
+  end
 
-  #   if initial_count < n do
-  #     [x | list]
-  #     initial_count + 1
-  #   end
+  @doc """
+  Removes the left-most duplicates from a list of integers and return the result.
+  """
 
-  #   list
+  # def remove_duplicates(list) do
+
   # end
+
+  @doc """
+  Moves all the zeros from a list to the end of it
+  """
+  def move_zeros(arr) do
+    filtered_list = arr |> Enum.filter(fn x -> x != 0 end)
+
+    items_left = Enum.count(arr) - Enum.count(filtered_list)
+
+    case items_left != 0 do
+      false ->
+        filtered_list
+
+      true ->
+        Enum.reduce(1..items_left, filtered_list, fn _, acc -> List.insert_at(acc, -1, 0) end)
+    end
+  end
+
+  @doc """
+  Reverse and invert all integer values in a given list.
+  """
+  def reverse_invert(lst) do
+    lst
+    |> Enum.filter(&is_integer/1)
+    |> Enum.map(fn number ->
+      -number |> Integer.digits() |> Enum.reverse() |> Integer.undigits()
+    end)
+  end
 end

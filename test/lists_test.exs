@@ -62,8 +62,29 @@ defmodule ListsTest do
     grow([2, 2, 2, 2, 2, 2], 64)
   end
 
-  # test "count by" do
-  #   assert count_by(1, 5) == [1, 2, 3, 4, 5]
-  #   assert count_by(2, 5) == [2, 4, 6, 8, 10]
+  test "count by" do
+    assert count_by(1, 5) == [1, 2, 3, 4, 5]
+    assert count_by(2, 5) == [2, 4, 6, 8, 10]
+  end
+
+  # test "remove duplicates" do
+  #   assert remove_duplicates([3, 4, 4, 3, 6, 3]) == [4, 6, 3]
+  #   assert remove_duplicates([1, 2, 1, 2, 1, 2, 3]) == [1, 2, 3]
+  #   assert remove_duplicates([1, 2, 3, 4]) == [1, 2, 3, 4]
+  #   assert remove_duplicates([1, 1, 4, 5, 1, 2, 1]) == [4, 5, 2, 1]
+  #   assert remove_duplicates([1, 2, 1, 2, 1, 1, 3]) == [2, 1, 3]
   # end
+
+  test "move zeros" do
+    assert move_zeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]) == [false, 1, 1, 2, 1, 3, "a", 0, 0]
+    assert move_zeros([false, 1, 1, 2, 1, 3, "a"]) == [false, 1, 1, 2, 1, 3, "a"]
+  end
+
+  test "reverses and invert all integer values in a given list." do
+    assert reverse_invert([]) == []
+    assert reverse_invert([1, 2, 3, 4, 5]) == [-1, -2, -3, -4, -5]
+    assert reverse_invert([-10]) == [1]
+    assert reverse_invert([-9, -18, 99]) == [9, 81, -99]
+    assert reverse_invert([1, 12, 'a', 3.4, 87, 99.9, -42, 50, 5.6]) == [-1, -21, -78, 24, -5]
+  end
 end

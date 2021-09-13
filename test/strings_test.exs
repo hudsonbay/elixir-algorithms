@@ -32,5 +32,4 @@ defmodule StringsTest do
   test "Sample Tests" do
     assert reverse("world") == "dlrow"
   end
-
 end

@@ -1,5 +1,5 @@
 defmodule Ngram do
-    @doc """
+  @doc """
   Generates a set of every permutation of contiguous n-grams from a string of text,
   from 1-gram to n-grams where n is the number of words in the string
   """
