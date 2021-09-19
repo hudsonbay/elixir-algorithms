@@ -27,15 +27,11 @@ defmodule Fundamentals do
   The second value in the first integer array is 0, since the bus is
   empty in the first bus stop.
   """
-
-  # def bus([h | t]) do
-  #   {enter, leave} = h
-  #   enter - leave + bus(t)
-  # end
-
-  # def bus([]), do: 0
-
-  # def bus([{0, 0}]), do: 0
+  def bus(stops) do
+    stops
+    |> Enum.map(fn {enter, leave} -> enter - leave end)
+    |> Enum.sum()
+  end
 
   @doc """
   Your task is to make a function that can take any non-negative integer as an argument and return it with
