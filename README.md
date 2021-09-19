@@ -2,8 +2,6 @@
 
 ## Description
 
-![screenshot](elixir_training.png)
-
 These are a bunch of different algorithms made on Elixir language, broken down by categories.
 
 I made this project because I wanted to learn Elixir by implementing different algorithms. I'm still doing it so forgive me if you find any bad practice(s) here. These algorithms were made by a newbie like me. I still don't know all the libraries.
