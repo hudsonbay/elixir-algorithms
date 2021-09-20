@@ -9,6 +9,7 @@ defmodule Rules do
   is able to eat the ghost. The function should return true only if Pac-Man
   has a power pellet active and is touching a ghost.
   """
+  @spec eat_ghost?(boolean, boolean) :: boolean
   def eat_ghost?(power_pellet_active, touching_ghost) do
     power_pellet_active and touching_ghost
   end
@@ -18,6 +19,7 @@ defmodule Rules do
   Pac-Man is touching a dot) and returns a boolean value if Pac-Man scored. The function
   should return true if Pac-Man is touching a power pellet or a dot.
   """
+  @spec score?(boolean, boolean) :: boolean
   def score?(touching_power_pellet, touching_dot) do
     touching_power_pellet or touching_dot
   end
@@ -27,6 +29,7 @@ defmodule Rules do
   if Pac-Man is touching a ghost) and returns a boolean value if Pac-Man loses.
   The function should return true if Pac-Man is touching a ghost and does not have a power pellet active.
   """
+  @spec lose?(boolean, boolean) :: boolean
   def lose?(power_pellet_active, touching_ghost) do
     not power_pellet_active and touching_ghost
   end
@@ -37,6 +40,7 @@ defmodule Rules do
   returns a boolean value if Pac-Man wins. The function should return true if Pac-Man
   has eaten all of the dots and has not lost based on the arguments defined in part 3.
   """
+  @spec win?(boolean, boolean, boolean) :: boolean
   def win?(has_eaten_all_dots, power_pellet_active, touching_ghost) do
     has_eaten_all_dots and not lose?(power_pellet_active, touching_ghost)
   end
