@@ -22,7 +22,8 @@ defmodule ElixirTraining.MixProject do
   defp deps do
     [
       {:ex_doc, "~> 0.11", only: :dev},
-      {:mix_test_watch, "~> 1.0.2", only: :dev}
+      {:mix_test_watch, "~> 1.0.2", only: :dev},
+      {:credo, "~> 1.5", only: [:dev, :test], runtime: false}
     ]
   end
 end
