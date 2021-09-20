@@ -245,8 +245,8 @@ defmodule Fundamentals do
   # def stringy(size), do: Enum.map(1..size, & rem(&1,2) == 0 && "0" || "1") |> Enum.join("")
 
   @doc """
-  Write a program that finds the summation of every number from 1 to num. The number will always
-  be a positive integer greater than 0.
+  Write a program that finds the summation of every number from 1 to num. The number
+  will always be a positive integer greater than 0.
 
   For example:
 

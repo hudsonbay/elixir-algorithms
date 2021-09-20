@@ -1,4 +1,7 @@
 defmodule Lasagna do
+  @moduledoc """
+  https://exercism.org/tracks/elixir/exercises/lasagna
+  """
   @doc """
   Define the Lasagna.expected_minutes_in_oven/0 method that does not take
   any arguments and returns how many minutes the lasagna should be in the oven.

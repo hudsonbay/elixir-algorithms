@@ -1,4 +1,7 @@
 defmodule Secrets do
+  @moduledoc """
+  https://exercism.org/tracks/elixir/exercises/secrets
+  """
   @doc """
   It should return a function which takes
   one argument and adds to it the argument passed in to secret_add.
@@ -40,5 +43,5 @@ defmodule Secrets do
   passed in to secret_combine in order.
   """
   def secret_combine(secret_function1, secret_function2),
-    do: &(secret_function2.(secret_function1.(&1)))
+    do: &secret_function2.(secret_function1.(&1))
 end

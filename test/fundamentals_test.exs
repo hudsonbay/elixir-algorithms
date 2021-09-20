@@ -19,7 +19,7 @@ defmodule FundamentalsTest do
         {0, 0},
         {123_456_789, 987_654_321},
         {567_821, 876_521},
-        {55672, 76552},
+        {55_672, 76_552},
         {1_231_293_922, 9_933_222_211}
       ],
       fn {n, expected} ->
@@ -34,7 +34,7 @@ defmodule FundamentalsTest do
   end
 
   test "digitize" do
-    assert digitize(35231) == [1, 3, 2, 5, 3]
+    assert digitize(35_231) == [1, 3, 2, 5, 3]
   end
 
   defp testing(x, exp) do
@@ -62,7 +62,7 @@ defmodule FundamentalsTest do
   end
 
   test "basic tests" do
-    assert past(0, 1, 1) == 61000
+    assert past(0, 1, 1) == 61_000
     assert past(1, 1, 1) == 3_661_000
     assert past(0, 0, 0) == 0
     assert past(1, 0, 1) == 3_601_000

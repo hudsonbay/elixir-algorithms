@@ -90,14 +90,6 @@ defmodule Lists do
   end
 
   @doc """
-  Removes the left-most duplicates from a list of integers and return the result.
-  """
-
-  # def remove_duplicates(list) do
-
-  # end
-
-  @doc """
   Moves all the zeros from a list to the end of it
   """
   def move_zeros(arr) do

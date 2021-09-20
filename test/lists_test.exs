@@ -67,14 +67,6 @@ defmodule ListsTest do
     assert count_by(2, 5) == [2, 4, 6, 8, 10]
   end
 
-  # test "remove duplicates" do
-  #   assert remove_duplicates([3, 4, 4, 3, 6, 3]) == [4, 6, 3]
-  #   assert remove_duplicates([1, 2, 1, 2, 1, 2, 3]) == [1, 2, 3]
-  #   assert remove_duplicates([1, 2, 3, 4]) == [1, 2, 3, 4]
-  #   assert remove_duplicates([1, 1, 4, 5, 1, 2, 1]) == [4, 5, 2, 1]
-  #   assert remove_duplicates([1, 2, 1, 2, 1, 1, 3]) == [2, 1, 3]
-  # end
-
   test "move zeros" do
     assert move_zeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]) == [false, 1, 1, 2, 1, 3, "a", 0, 0]
     assert move_zeros([false, 1, 1, 2, 1, 3, "a"]) == [false, 1, 1, 2, 1, 3, "a"]
